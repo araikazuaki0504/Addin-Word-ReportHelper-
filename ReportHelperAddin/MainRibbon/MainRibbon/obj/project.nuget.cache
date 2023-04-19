@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "U2DAdovAx1WvYEXLog8Hl5RLj+fpbEC6dRzG1p0r3ea8u0Sxmj9K8FVM2D1foY7Y7EnZMxsD/dduk/ECTMJaSg==",
+  "success": true,
+  "projectFilePath": "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kabah\\.nuget\\packages\\microsoft.web.webview2\\1.0.1722.45\\microsoft.web.webview2.1.0.1722.45.nupkg.sha512"
+  ],
+  "logs": []
+}
