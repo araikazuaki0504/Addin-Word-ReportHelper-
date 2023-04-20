@@ -108,5 +108,11 @@ namespace TextsViewer
                 }
             }
         }
+
+        private void TextViewer_Deactivate(object sender, EventArgs e)
+        {
+            this.Focus();
+            this.TopMost = true;
+        }
     }
 }

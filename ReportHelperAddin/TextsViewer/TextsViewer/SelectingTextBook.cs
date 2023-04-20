@@ -50,23 +50,5 @@ namespace TextsViewer
                 this.ExprimentName.Items.Add(SplitedFilePath[SplitedFilePath.Length - 1]);
             }
         }
-
-        // P/Invokeの定義 (pinvoke.net参照)
-        public static IntPtr SetWindowLongPtr(HandleRef hWnd, int nIndex, IntPtr dwNewLong)
-        {
-            if (IntPtr.Size == 8)
-                return SetWindowLongPtr64(hWnd, nIndex, dwNewLong);
-            else
-                return new IntPtr(SetWindowLong32(hWnd, nIndex, dwNewLong.ToInt32()));
-        }
-
-        [DllImport("user32.dll", EntryPoint = "SetWindowLong")]
-        private static extern int SetWindowLong32(HandleRef hWnd, int nIndex, int dwNewLong);
-
-        [DllImport("user32.dll", EntryPoint = "SetWindowLongPtr")]
-        private static extern IntPtr SetWindowLongPtr64(HandleRef hWnd, int nIndex, IntPtr dwNewLong);
-
-        private const int GWL_HWNDPARENT = -8;
-
     }
 }

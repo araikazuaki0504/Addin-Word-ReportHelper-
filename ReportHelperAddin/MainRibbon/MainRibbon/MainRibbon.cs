@@ -19,37 +19,16 @@ namespace MainRibbon
         {
             Form form = new SelectingTextBook();
             form.ShowDialog();
+            form.Close();
         }
 
         private void ViewerFromDialog_Click(object sender, RibbonControlEventArgs e)
         {
-            SelectingFile.ShowDialog();
-            SwitchFormByExtention(SelectingFile.FileName);
+            //SelectingFile.ShowDialog();
+            Form form = new OwnerForm(SelectingFile.FileName);
+            form.ShowDialog();
+            form.Close();
         }
 
-        private void SwitchFormByExtention(string filePath)
-        {
-            string Extention = filePath.Split('.').Last();
-            Form ViewForm = null;
-
-            switch(Extention)
-            {
-                case "_":
-                    MessageBox.Show("このファイルは対応していません");
-                    break;
-                case "pdf":
-                    ViewForm = new TextViewer(filePath);
-                    break;
-                case "png":
-                case "jpg":
-                case "bmp":
-                case "gif":
-                case "tiff":
-                    ViewForm = new TextViewerFromDialog(filePath);
-                    break;
-            }
-
-            ViewForm.ShowDialog();
-        }
     }
 }

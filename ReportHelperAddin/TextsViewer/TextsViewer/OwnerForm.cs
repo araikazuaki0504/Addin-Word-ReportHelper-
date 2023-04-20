@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace TextsViewer
+{
+    public partial class OwnerForm : Form
+    {
+        string _Filepath = string.Empty;
+        public OwnerForm(string FilePath)
+        {
+            InitializeComponent();
+            _Filepath = FilePath;
+        }
+
+        private void OwnerForm_Load(object sender, EventArgs e)
+        {
+            //SwitchingByExtention(_Filepath);
+        }
+
+        private void SwitchingByExtention(string FilePath)
+        {
+            string Extention = FilePath.Split('.').Last();
+
+            switch (Extention)
+            {
+                case "_":
+                    MessageBox.Show("このファイルは対応していません");
+                    break;
+                case "pdf":
+                    Form ViewFormForPDF = new TextViewer(FilePath);
+                    this.Owner = ViewFormForPDF;
+                    ViewFormForPDF.ShowDialog();
+                    break;
+                case "png":
+                case "jpg":
+                case "bmp":
+                case "gif":
+                case "tiff":
+                    Form ViewFormForImages = new TextViewerFromDialog(FilePath);
+                    this.Owner = ViewFormForImages;
+                    ViewFormForImages.ShowDialog();
+                    break;
+            }
+        }
+
+    }
+}

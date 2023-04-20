@@ -36,8 +36,8 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.display = this.Factory.CreateRibbonGroup();
-            this.ViewerForTextBooks = this.Factory.CreateRibbonButton();
             this.ViewerFromDialog = this.Factory.CreateRibbonButton();
+            this.ViewerForTextBooks = this.Factory.CreateRibbonButton();
             this.SelectingFile = new System.Windows.Forms.OpenFileDialog();
             this.tab1.SuspendLayout();
             this.display.SuspendLayout();
@@ -57,15 +57,6 @@
             this.display.Label = "表示";
             this.display.Name = "display";
             // 
-            // ViewerForTextBooks
-            // 
-            this.ViewerForTextBooks.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.ViewerForTextBooks.Image = global::MainRibbon.Properties.Resources.pdf;
-            this.ViewerForTextBooks.Label = "実験テキストを表示";
-            this.ViewerForTextBooks.Name = "ViewerForTextBooks";
-            this.ViewerForTextBooks.ShowImage = true;
-            this.ViewerForTextBooks.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ViewerForTextBooks_Click);
-            // 
             // ViewerFromDialog
             // 
             this.ViewerFromDialog.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -74,6 +65,15 @@
             this.ViewerFromDialog.Name = "ViewerFromDialog";
             this.ViewerFromDialog.ShowImage = true;
             this.ViewerFromDialog.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ViewerFromDialog_Click);
+            // 
+            // ViewerForTextBooks
+            // 
+            this.ViewerForTextBooks.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.ViewerForTextBooks.Image = global::MainRibbon.Properties.Resources.pdf;
+            this.ViewerForTextBooks.Label = "実験テキストを表示";
+            this.ViewerForTextBooks.Name = "ViewerForTextBooks";
+            this.ViewerForTextBooks.ShowImage = true;
+            this.ViewerForTextBooks.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ViewerForTextBooks_Click);
             // 
             // SelectingFile
             // 

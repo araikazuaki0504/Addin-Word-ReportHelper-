@@ -50,6 +50,7 @@ namespace TextsViewer
             this.Controls.Add(this.PDFViewer);
             this.Name = "TextViewer";
             this.TopMost = true;
+            this.Deactivate += new System.EventHandler(this.TextViewer_Deactivate);
             this.Load += new System.EventHandler(this.TextViewer_Load);
             this.Resize += new System.EventHandler(this.DisplayTextBook_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.PDFViewer)).EndInit();

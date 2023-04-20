@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U2DAdovAx1WvYEXLog8Hl5RLj+fpbEC6dRzG1p0r3ea8u0Sxmj9K8FVM2D1foY7Y7EnZMxsD/dduk/ECTMJaSg==",
+  "dgSpecHash": "p4RSGCO02Dl/fbPR6t4vk6BuJG836/jMqBkhNDcXU6QgVP7scW4zQm1DikuHTr64M9zeCp7aZXnQNTGswY9kYQ==",
   "success": true,
-  "projectFilePath": "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
+  "projectFilePath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kabah\\.nuget\\packages\\microsoft.web.webview2\\1.0.1722.45\\microsoft.web.webview2.1.0.1722.45.nupkg.sha512"
   ],
