@@ -202,6 +202,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\makeTableFromExcel\makeTableFromExcel\makeTableFromExcel.csproj">
+      <Project>{f306ac04-c82f-4da3-a180-2a9bf851a93c}</Project>
+      <Name>makeTableFromExcel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\TextsViewer\TextsViewer\TextsViewer.csproj">
       <Project>{9d88c109-2ed3-40bd-83e1-c92af19c2724}</Project>
       <Name>TextsViewer</Name>
@@ -214,6 +218,9 @@
     <PackageReference Include="Microsoft.Web.WebView2">
       <Version>1.0.1722.45</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

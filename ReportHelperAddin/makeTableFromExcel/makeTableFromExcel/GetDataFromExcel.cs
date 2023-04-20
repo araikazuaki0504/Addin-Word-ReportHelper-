@@ -18,7 +18,7 @@ namespace makeTableFromExcel
             _FilePath = FilePath;
         }
 
-        private void main()
+        public void Main()
         {
             Excel.Application TargetExcel;
             try

@@ -17,17 +17,19 @@ namespace MainRibbon
 
         private void ViewerForTextBooks_Click(object sender, RibbonControlEventArgs e)
         {
-            Form form = new SelectingTextBook();
-            form.ShowDialog();
-            form.Close();
+            using (Form form = new SelectingTextBook())
+            {
+                form.ShowDialog();
+            }
         }
 
         private void ViewerFromDialog_Click(object sender, RibbonControlEventArgs e)
         {
-            //SelectingFile.ShowDialog();
-            Form form = new OwnerForm(SelectingFile.FileName);
-            form.ShowDialog();
-            form.Close();
+            SelectingFile.ShowDialog();
+            using (Form form = new OwnerForm(SelectingFile.FileName))
+            {
+                form.ShowDialog();
+            }
         }
 
     }

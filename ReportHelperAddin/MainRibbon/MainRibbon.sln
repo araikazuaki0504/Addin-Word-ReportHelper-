@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainRibbon", "MainRibbon\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextsViewer", "..\TextsViewer\TextsViewer\TextsViewer.csproj", "{9D88C109-2ED3-40BD-83E1-C92AF19C2724}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "makeTableFromExcel", "..\makeTableFromExcel\makeTableFromExcel\makeTableFromExcel.csproj", "{F306AC04-C82F-4DA3-A180-2A9BF851A93C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{9D88C109-2ED3-40BD-83E1-C92AF19C2724}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D88C109-2ED3-40BD-83E1-C92AF19C2724}.Release|x86.ActiveCfg = Release|Win32
 		{9D88C109-2ED3-40BD-83E1-C92AF19C2724}.Release|x86.Build.0 = Release|Win32
+		{F306AC04-C82F-4DA3-A180-2A9BF851A93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F306AC04-C82F-4DA3-A180-2A9BF851A93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F306AC04-C82F-4DA3-A180-2A9BF851A93C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F306AC04-C82F-4DA3-A180-2A9BF851A93C}.Debug|x86.Build.0 = Debug|Any CPU
+		{F306AC04-C82F-4DA3-A180-2A9BF851A93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F306AC04-C82F-4DA3-A180-2A9BF851A93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F306AC04-C82F-4DA3-A180-2A9BF851A93C}.Release|x86.ActiveCfg = Release|Any CPU
+		{F306AC04-C82F-4DA3-A180-2A9BF851A93C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

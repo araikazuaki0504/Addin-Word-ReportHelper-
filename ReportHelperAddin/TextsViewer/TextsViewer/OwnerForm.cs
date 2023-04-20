@@ -21,7 +21,7 @@ namespace TextsViewer
 
         private void OwnerForm_Load(object sender, EventArgs e)
         {
-            //SwitchingByExtention(_Filepath);
+            SwitchingByExtention(_Filepath);
         }
 
         private void SwitchingByExtention(string FilePath)
@@ -34,20 +34,24 @@ namespace TextsViewer
                     MessageBox.Show("このファイルは対応していません");
                     break;
                 case "pdf":
+                    this.Visible = false;
                     Form ViewFormForPDF = new TextViewer(FilePath);
                     this.Owner = ViewFormForPDF;
-                    ViewFormForPDF.ShowDialog();
+                    ViewFormForPDF.Show();
                     break;
                 case "png":
                 case "jpg":
                 case "bmp":
                 case "gif":
                 case "tiff":
+                    this.Visible = false;
                     Form ViewFormForImages = new TextViewerFromDialog(FilePath);
                     this.Owner = ViewFormForImages;
-                    ViewFormForImages.ShowDialog();
+                    ViewFormForImages.Show();
                     break;
             }
+
+            this.Close();
         }
 
     }

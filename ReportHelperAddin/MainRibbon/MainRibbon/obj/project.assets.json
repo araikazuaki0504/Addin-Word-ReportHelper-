@@ -5,14 +5,26 @@
       "Microsoft.Web.WebView2/1.0.1722.45": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "build/Microsoft.Web.WebView2.targets": {}
@@ -30,6 +42,15 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "makeTableFromExcel/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/makeTableFromExcel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/makeTableFromExcel.dll": {}
         }
       },
       "TextsViewer/1.0.0": {
@@ -50,17 +71,38 @@
       "Microsoft.Web.WebView2/1.0.1722.45": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "build/Microsoft.Web.WebView2.targets": {}
+        }
+      },
+      "makeTableFromExcel/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/makeTableFromExcel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/makeTableFromExcel.dll": {}
         }
       },
       "TextsViewer/1.0.0": {
@@ -81,20 +123,41 @@
       "Microsoft.Web.WebView2/1.0.1722.45": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
         },
         "native": {
           "runtimes/win-x64/native/WebView2Loader.dll": {}
         },
         "build": {
           "build/Microsoft.Web.WebView2.targets": {}
+        }
+      },
+      "makeTableFromExcel/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/makeTableFromExcel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/makeTableFromExcel.dll": {}
         }
       },
       "TextsViewer/1.0.0": {
@@ -115,20 +178,41 @@
       "Microsoft.Web.WebView2/1.0.1722.45": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
+            "related": ".xml"
+          }
         },
         "native": {
           "runtimes/win-x86/native/WebView2Loader.dll": {}
         },
         "build": {
           "build/Microsoft.Web.WebView2.targets": {}
+        }
+      },
+      "makeTableFromExcel/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/makeTableFromExcel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/makeTableFromExcel.dll": {}
         }
       },
       "TextsViewer/1.0.0": {
@@ -237,6 +321,11 @@
         "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
     },
+    "makeTableFromExcel/1.0.0": {
+      "type": "project",
+      "path": "../../makeTableFromExcel/makeTableFromExcel/makeTableFromExcel.csproj",
+      "msbuildProject": "../../makeTableFromExcel/makeTableFromExcel/makeTableFromExcel.csproj"
+    },
     "TextsViewer/1.0.0": {
       "type": "project",
       "path": "../../TextsViewer/TextsViewer/TextsViewer.csproj",
@@ -246,24 +335,30 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8.1": [
       "Microsoft.Web.WebView2 >= 1.0.1722.45",
-      "TextsViewer >= 1.0.0"
+      "TextsViewer >= 1.0.0",
+      "makeTableFromExcel >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kabah\\.nuget\\packages\\": {}
+    "C:\\Users\\kabah\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
+      "projectUniqueName": "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
       "projectName": "MainRibbon",
-      "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
+      "projectPath": "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
       "packagesPath": "C:\\Users\\kabah\\.nuget\\packages\\",
-      "outputPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\MainRibbon\\MainRibbon\\obj\\",
+      "outputPath": "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\kabah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -271,13 +366,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\NuGet": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net481": {
           "projectReferences": {
-            "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
-              "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj"
+            "D:\\Addin\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj": {
+              "projectPath": "D:\\Addin\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj"
+            },
+            "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
+              "projectPath": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj"
             }
           }
         }

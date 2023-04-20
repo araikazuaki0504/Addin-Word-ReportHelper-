@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OeG8KpunJLUiZctzr+BJ7Y0JtJjkEwAj2tRiSTsLimOYmOMss2ZWOZNqoIynOKmwkN7pvpc4XY8Cnlj901X1Lw==",
+  "dgSpecHash": "nxuBFXbwNpOt0mZ/+rVcFFxOHKq8QhhCQHS2UuFozNc7AX5p3/R7/9XD1SXr+FxxfI82dHlpB9i4oBXWI0vdwg==",
   "success": true,
-  "projectFilePath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
+  "projectFilePath": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kabah\\.nuget\\packages\\microsoft.web.webview2\\1.0.1722.45\\microsoft.web.webview2.1.0.1722.45.nupkg.sha512"
   ],

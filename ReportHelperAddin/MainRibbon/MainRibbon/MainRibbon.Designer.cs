@@ -36,17 +36,21 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.display = this.Factory.CreateRibbonGroup();
+            this.SelectingFile = new System.Windows.Forms.OpenFileDialog();
+            this.group1 = this.Factory.CreateRibbonGroup();
             this.ViewerFromDialog = this.Factory.CreateRibbonButton();
             this.ViewerForTextBooks = this.Factory.CreateRibbonButton();
-            this.SelectingFile = new System.Windows.Forms.OpenFileDialog();
+            this.CreateTableFromExcel = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.display.SuspendLayout();
+            this.group1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab1
             // 
             this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.tab1.Groups.Add(this.display);
+            this.tab1.Groups.Add(this.group1);
             this.tab1.Label = "ReportHelper";
             this.tab1.Name = "tab1";
             // 
@@ -56,6 +60,16 @@
             this.display.Items.Add(this.ViewerForTextBooks);
             this.display.Label = "表示";
             this.display.Name = "display";
+            // 
+            // SelectingFile
+            // 
+            this.SelectingFile.FileName = "SelectingFile";
+            // 
+            // group1
+            // 
+            this.group1.Items.Add(this.CreateTableFromExcel);
+            this.group1.Label = "group1";
+            this.group1.Name = "group1";
             // 
             // ViewerFromDialog
             // 
@@ -75,9 +89,13 @@
             this.ViewerForTextBooks.ShowImage = true;
             this.ViewerForTextBooks.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ViewerForTextBooks_Click);
             // 
-            // SelectingFile
+            // CreateTableFromExcel
             // 
-            this.SelectingFile.FileName = "SelectingFile";
+            this.CreateTableFromExcel.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.CreateTableFromExcel.Image = global::MainRibbon.Properties.Resources.Excel;
+            this.CreateTableFromExcel.Label = "エクセルからテーブル";
+            this.CreateTableFromExcel.Name = "CreateTableFromExcel";
+            this.CreateTableFromExcel.ShowImage = true;
             // 
             // ReportHelper
             // 
@@ -88,6 +106,8 @@
             this.tab1.PerformLayout();
             this.display.ResumeLayout(false);
             this.display.PerformLayout();
+            this.group1.ResumeLayout(false);
+            this.group1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -99,6 +119,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ViewerForTextBooks;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ViewerFromDialog;
         private System.Windows.Forms.OpenFileDialog SelectingFile;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton CreateTableFromExcel;
     }
 
     partial class ThisRibbonCollection

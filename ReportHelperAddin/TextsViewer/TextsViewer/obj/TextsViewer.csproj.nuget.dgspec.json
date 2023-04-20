@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {}
+    "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {}
   },
   "projects": {
-    "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
+    "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
+        "projectUniqueName": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
         "projectName": "TextsViewer",
-        "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
+        "projectPath": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
         "packagesPath": "C:\\Users\\kabah\\.nuget\\packages\\",
-        "outputPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\obj\\",
+        "outputPath": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\kabah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,6 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
