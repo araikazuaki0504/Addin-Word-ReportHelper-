@@ -13,7 +13,7 @@ namespace makeTableFromExcel
             _FilePath = FilePath;
         }
 
-        public void Main()
+        public List<object[,]> Main()
         {
             Excel.Application excel = new Excel.Application();
             Excel.Workbooks excelWorkBooks = excel.Workbooks;
@@ -22,29 +22,48 @@ namespace makeTableFromExcel
             Excel.Worksheet excelSheet = excelSheets[1] as Excel.Worksheet;
             List<string> ColRenge = new List<string>();
             List<object[,]> GottenData = new List<object[,]>();
+            KeyboardHook KeyBoardHook = new KeyboardHook();
 
             excel.Visible = true;
 
-            Console.ReadKey();
-
-            foreach (Excel.Range Data in excel.Selection.Areas)
+            KeyBoardHook.OnKeyDown += (s, ea) =>
             {
-                ColRenge.Add(Data.Address.ToString());
-            }
+                if (ea.Key.ToString() == "Return")
+                {
+                    foreach (Excel.Range Data in excel.Selection.Areas)
+                    {
+                        ColRenge.Add(Data.Address.ToString());
+                    }
 
 
-            foreach (string Col in ColRenge)
+                    foreach (string Col in ColRenge)
+                    {
+                        string[] IndexArray = Col.Remove(Col.IndexOf(':'), 1).TrimStart('$').Split('$');
+                        object[,] tmpBuffer = excelSheet.Range[IndexArray[0] + IndexArray[1], IndexArray[2] + IndexArray[3]].Value;
+                        GottenData.Add(tmpBuffer);
+                    }
+                }
+
+                ea.RetCode = 0;
+            };
+            KeyBoardHook.Hook();
+
+            KeyBoardHook.UnHook();
+
+            for (int i = 1; i < GottenData[0].GetLength(0); i++)
             {
-                string[] IndexArray = Col.Remove(Col.IndexOf(':'), 1).TrimStart('$').Split('$');
-                object[,] tmpBuffer = excelSheet.Range[IndexArray[0] + IndexArray[1], IndexArray[2] + IndexArray[3]].Value;
-                GottenData.Add(tmpBuffer);
+                for (int j = 1; j < GottenData[0].GetLength(1); j++)
+                {
+                    Console.WriteLine(GottenData[0][i, j].ToString());
+                }
             }
-
 
             foreach (var TargetClass in new object[5] { excel, excelWorkBooks, excelWorkBook, excelSheets, excelSheet })
             {
                 Release.Marshal.ReleaseComObject(TargetClass);
             }
+
+            return GottenData;
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using TextsViewer;
+using FetchData = makeTableFromExcel.GetDataFromExcel;
 
 namespace MainRibbon
 {
@@ -34,8 +35,10 @@ namespace MainRibbon
 
         private void CreateTableFromExcel_Click(object sender, RibbonControlEventArgs e)
         {
-            makeTableFromExcel.GetDataFromExcel FetchData = new makeTableFromExcel.GetDataFromExcel(string.Empty);
-            FetchData.Main();
+            SelectingFile.ShowDialog();
+            FetchData fetchData = new FetchData(SelectingFile.FileName);
+            List<object[,]> Data = fetchData.Main();
+            
         }
     }
 }
