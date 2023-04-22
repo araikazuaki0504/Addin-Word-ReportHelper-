@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using Excel = Microsoft.Office.Interop.Excel;
-using Microsoft.Office.Tools.Excel;
+using Release = System.Runtime.InteropServices;
 
 namespace makeTableFromExcel
 {
@@ -20,60 +15,36 @@ namespace makeTableFromExcel
 
         public void Main()
         {
-            Excel.Application TargetExcel;
-            try
+            Excel.Application excel = new Excel.Application();
+            Excel.Workbooks excelWorkBooks = excel.Workbooks;
+            Excel.Workbook excelWorkBook = excelWorkBooks.Open(_FilePath);
+            Excel.Sheets excelSheets = excelWorkBook.Sheets;
+            Excel.Worksheet excelSheet = excelSheets[1] as Excel.Worksheet;
+            List<string> ColRenge = new List<string>();
+            List<object[,]> GottenData = new List<object[,]>();
+
+            excel.Visible = true;
+
+            Console.ReadKey();
+
+            foreach (Excel.Range Data in excel.Selection.Areas)
             {
-                TargetExcel = (Excel.Application)System.Runtime.InteropServices.Marshal.GetActiveObject("Excel.Application");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"errorMessage{ex.Message}");
-                return;
+                ColRenge.Add(Data.Address.ToString());
             }
 
-            Excel.Workbooks xlBooks = null;
-            Excel.Workbook xlBook = null;
-            Excel.Sheets xlSheets = null;
-            Excel.Worksheet xlSheet = null;
-            Excel.Range xlCells = null;
-            Excel.Range xlCell = null;
-            try
+
+            foreach (string Col in ColRenge)
             {
-                xlBooks = TargetExcel.Workbooks;
-                if (xlBooks.Count >= 2)
-                {
-                    Console.WriteLine("Excelファイルを複数開かないでください。");
-                    return;
-                }
-                else if (xlBooks.Count == 0)
-                {
-                    return;
-                }
-
-                Fetch(xlBooks, xlBook, xlSheets, xlSheet, xlCells, xlCell);
+                string[] IndexArray = Col.Remove(Col.IndexOf(':'), 1).TrimStart('$').Split('$');
+                object[,] tmpBuffer = excelSheet.Range[IndexArray[0] + IndexArray[1], IndexArray[2] + IndexArray[3]].Value;
+                GottenData.Add(tmpBuffer);
             }
-            finally
+
+
+            foreach (var TargetClass in new object[5] { excel, excelWorkBooks, excelWorkBook, excelSheets, excelSheet })
             {
-                // 解放処理
-                foreach (object comObj in new object[] { xlCell, xlCells, xlSheet, xlSheets, xlBook, xlBooks })
-                {
-                    if (comObj != null)
-                        System.Runtime.InteropServices.Marshal.ReleaseComObject(comObj);
-                }
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(TargetExcel);
+                Release.Marshal.ReleaseComObject(TargetClass);
             }
-        }
-
-        private void Fetch(Excel.Workbooks xlBooks, Excel.Workbook xlBook, Excel.Sheets xlSheets, Excel.Worksheet xlSheet, Excel.Range xlCells, Excel.Range xlCell)
-        {
-            // 先頭のシートのA1セルに文字列を書き込みます。
-            xlBook = xlBooks.Item[1];
-            xlSheets = xlBook.Sheets;
-            xlSheet = xlSheets.Item[1];
-            xlCells = xlSheet.Cells;
-            xlCell = xlCells[1, 1];
-            xlCell.Value = "C#から書き込み";
-
         }
     }
 }

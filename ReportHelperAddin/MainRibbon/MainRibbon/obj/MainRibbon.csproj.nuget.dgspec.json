@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj": {}
+    "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj": {}
   },
   "projects": {
-    "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj": {
+    "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
+        "projectUniqueName": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
         "projectName": "MainRibbon",
-        "projectPath": "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
+        "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\MainRibbon\\MainRibbon\\MainRibbon.csproj",
         "packagesPath": "C:\\Users\\kabah\\.nuget\\packages\\",
-        "outputPath": "D:\\Addin\\ReportHelperAddin\\MainRibbon\\MainRibbon\\obj\\",
+        "outputPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\MainRibbon\\MainRibbon\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\kabah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,17 +23,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net481": {
             "projectReferences": {
-              "D:\\Addin\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj": {
-                "projectPath": "D:\\Addin\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj"
+              "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj": {
+                "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj"
               },
-              "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
-                "projectPath": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj"
+              "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
+                "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj"
               }
             }
           }
@@ -65,11 +60,11 @@
         }
       }
     },
-    "D:\\Addin\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj": {
+    "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\Addin\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj",
+        "projectUniqueName": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj",
         "projectName": "makeTableFromExcel",
-        "projectPath": "D:\\Addin\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj",
+        "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj",
         "frameworks": {
           "net481": {
             "projectReferences": {}
@@ -80,22 +75,18 @@
         "net481": {}
       }
     },
-    "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
+    "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
+        "projectUniqueName": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
         "projectName": "TextsViewer",
-        "projectPath": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
+        "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
         "packagesPath": "C:\\Users\\kabah\\.nuget\\packages\\",
-        "outputPath": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\obj\\",
+        "outputPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\kabah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,7 +94,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

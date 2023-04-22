@@ -32,5 +32,10 @@ namespace MainRibbon
             }
         }
 
+        private void CreateTableFromExcel_Click(object sender, RibbonControlEventArgs e)
+        {
+            makeTableFromExcel.GetDataFromExcel FetchData = new makeTableFromExcel.GetDataFromExcel(string.Empty);
+            FetchData.Main();
+        }
     }
 }

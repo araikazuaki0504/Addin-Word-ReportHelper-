@@ -5,26 +5,14 @@
       "Microsoft.Web.WebView2/1.0.1722.45": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
-            "related": ".xml"
-          }
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
         },
         "runtime": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
-            "related": ".xml"
-          }
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
         },
         "build": {
           "build/Microsoft.Web.WebView2.targets": {}
@@ -49,26 +37,14 @@
       "Microsoft.Web.WebView2/1.0.1722.45": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
-            "related": ".xml"
-          }
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
         },
         "runtime": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
-            "related": ".xml"
-          }
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
         },
         "build": {
           "build/Microsoft.Web.WebView2.targets": {}
@@ -79,26 +55,14 @@
       "Microsoft.Web.WebView2/1.0.1722.45": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
-            "related": ".xml"
-          }
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
         },
         "runtime": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
-            "related": ".xml"
-          }
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
         },
         "native": {
           "runtimes/win-x64/native/WebView2Loader.dll": {}
@@ -112,26 +76,14 @@
       "Microsoft.Web.WebView2/1.0.1722.45": {
         "type": "package",
         "compile": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
-            "related": ".xml"
-          }
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
         },
         "runtime": {
-          "lib/net45/Microsoft.Web.WebView2.Core.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {
-            "related": ".xml"
-          },
-          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {
-            "related": ".xml"
-          }
+          "lib/net45/Microsoft.Web.WebView2.Core.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.WinForms.dll": {},
+          "lib/net45/Microsoft.Web.WebView2.Wpf.dll": {}
         },
         "native": {
           "runtimes/win-x86/native/WebView2Loader.dll": {}
@@ -240,25 +192,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kabah\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\kabah\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
+      "projectUniqueName": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
       "projectName": "TextsViewer",
-      "projectPath": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
+      "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
       "packagesPath": "C:\\Users\\kabah\\.nuget\\packages\\",
-      "outputPath": "D:\\Addin\\ReportHelperAddin\\TextsViewer\\TextsViewer\\obj\\",
+      "outputPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\kabah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -266,7 +213,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files (x86)\\NuGet": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
