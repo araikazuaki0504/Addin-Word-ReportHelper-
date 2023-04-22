@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Excel = Microsoft.Office.Interop.Excel;
 using Release = System.Runtime.InteropServices;
 
@@ -8,6 +10,7 @@ namespace makeTableFromExcel
     public class GetDataFromExcel
     {
         private string _FilePath = string.Empty;
+        private bool isClosed = false;
         public GetDataFromExcel(string FilePath)
         {
             _FilePath = FilePath;
@@ -17,45 +20,35 @@ namespace makeTableFromExcel
         {
             Excel.Application excel = new Excel.Application();
             Excel.Workbooks excelWorkBooks = excel.Workbooks;
-            Excel.Workbook excelWorkBook = excelWorkBooks.Open(_FilePath);
+            Excel.Workbook　excelWorkBook = excelWorkBooks.Open(_FilePath);
             Excel.Sheets excelSheets = excelWorkBook.Sheets;
             Excel.Worksheet excelSheet = excelSheets[1] as Excel.Worksheet;
             List<string> ColRenge = new List<string>();
             List<object[,]> GottenData = new List<object[,]>();
             KeyboardHook KeyBoardHook = new KeyboardHook();
 
+
             excel.Visible = true;
-
-            KeyBoardHook.OnKeyDown += (s, ea) =>
+            excelWorkBook.BeforeClose += IsExcelClosed_BeforeClose;
+            excelSheet.SelectionChange += (Excel.Range objects) =>
             {
-                if (ea.Key.ToString() == "Return")
+                foreach (Excel.Range Data in excel.Selection.Areas)
                 {
-                    foreach (Excel.Range Data in excel.Selection.Areas)
-                    {
-                        ColRenge.Add(Data.Address.ToString());
-                    }
-
-
-                    foreach (string Col in ColRenge)
-                    {
-                        string[] IndexArray = Col.Remove(Col.IndexOf(':'), 1).TrimStart('$').Split('$');
-                        object[,] tmpBuffer = excelSheet.Range[IndexArray[0] + IndexArray[1], IndexArray[2] + IndexArray[3]].Value;
-                        GottenData.Add(tmpBuffer);
-                    }
+                    ColRenge.Add(Data.Address.ToString());
                 }
 
-                ea.RetCode = 0;
+
+                foreach (string Col in ColRenge)
+                {
+                    string[] IndexArray = Col.Remove(Col.IndexOf(':'), 1).TrimStart('$').Split('$');
+                    object[,] tmpBuffer = excelSheet.Range[IndexArray[0] + IndexArray[1], IndexArray[2] + IndexArray[3]].Value;
+                    GottenData.Add(tmpBuffer);
+                }
             };
-            KeyBoardHook.Hook();
 
-            KeyBoardHook.UnHook();
-
-            for (int i = 1; i < GottenData[0].GetLength(0); i++)
+            while (!isClosed) 
             {
-                for (int j = 1; j < GottenData[0].GetLength(1); j++)
-                {
-                    Console.WriteLine(GottenData[0][i, j].ToString());
-                }
+                Thread.Sleep(1000);
             }
 
             foreach (var TargetClass in new object[5] { excel, excelWorkBooks, excelWorkBook, excelSheets, excelSheet })
@@ -63,7 +56,15 @@ namespace makeTableFromExcel
                 Release.Marshal.ReleaseComObject(TargetClass);
             }
 
+            excelWorkBook.Close();
+            excel.Quit();
             return GottenData;
+        }
+
+        private void IsExcelClosed_BeforeClose(ref bool Cancel)
+        {
+            isClosed = true;
+            throw new NotImplementedException();
         }
     }
 }
