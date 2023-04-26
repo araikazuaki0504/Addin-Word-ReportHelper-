@@ -27,7 +27,6 @@ C:\Addin-Word-ReportHelper-\ReportHelperAddin\TextsViewer\TextsViewer\bin\Debug\
 C:\Addin-Word-ReportHelper-\ReportHelperAddin\TextsViewer\TextsViewer\bin\Debug\Microsoft.Web.WebView2.Core.dll
 C:\Addin-Word-ReportHelper-\ReportHelperAddin\TextsViewer\TextsViewer\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
 C:\Addin-Word-ReportHelper-\ReportHelperAddin\TextsViewer\TextsViewer\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
-C:\Addin-Word-ReportHelper-\ReportHelperAddin\TextsViewer\TextsViewer\obj\Debug\TextsViewer.csproj.AssemblyReference.cache
 C:\Addin-Word-ReportHelper-\ReportHelperAddin\TextsViewer\TextsViewer\obj\Debug\TextsViewer.OwnerForm.resources
 C:\Addin-Word-ReportHelper-\ReportHelperAddin\TextsViewer\TextsViewer\obj\Debug\TextsViewer.Properties.Resources.resources
 C:\Addin-Word-ReportHelper-\ReportHelperAddin\TextsViewer\TextsViewer\obj\Debug\TextsViewer.TextViewer.resources

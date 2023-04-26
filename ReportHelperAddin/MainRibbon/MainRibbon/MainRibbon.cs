@@ -38,6 +38,7 @@ namespace MainRibbon
             SelectingFile.ShowDialog();
             FetchData fetchData = new FetchData(SelectingFile.FileName);
             List<object[,]> Data = fetchData.Main();
+            Debug.WriteLine(Data[0][1, 1].ToString());
             
         }
     }

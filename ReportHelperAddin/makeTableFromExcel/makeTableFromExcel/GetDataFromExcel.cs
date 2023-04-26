@@ -30,7 +30,7 @@ namespace makeTableFromExcel
 
             excel.Visible = true;
             excelWorkBook.BeforeClose += IsExcelClosed_BeforeClose;
-            excelSheet.SelectionChange += (Excel.Range objects) =>
+            excelSheet.BeforeRightClick += (Excel.Range Target, ref bool Cancel) =>
             {
                 foreach (Excel.Range Data in excel.Selection.Areas)
                 {
