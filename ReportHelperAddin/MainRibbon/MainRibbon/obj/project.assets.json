@@ -32,6 +32,19 @@
           }
         }
       },
+      "DIsplayForms/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8.1",
+        "dependencies": {
+          "Microsoft.Web.WebView2": "1.0.1722.45"
+        },
+        "compile": {
+          "bin/placeholder/DIsplayForms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DIsplayForms.dll": {}
+        }
+      },
       "makeTableFromExcel/1.0.0": {
         "type": "project",
         "compile": {
@@ -39,19 +52,6 @@
         },
         "runtime": {
           "bin/placeholder/makeTableFromExcel.dll": {}
-        }
-      },
-      "TextsViewer/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.8.1",
-        "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.1722.45"
-        },
-        "compile": {
-          "bin/placeholder/TextsViewer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TextsViewer.dll": {}
         }
       }
     },
@@ -72,6 +72,19 @@
           "build/Microsoft.Web.WebView2.targets": {}
         }
       },
+      "DIsplayForms/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8.1",
+        "dependencies": {
+          "Microsoft.Web.WebView2": "1.0.1722.45"
+        },
+        "compile": {
+          "bin/placeholder/DIsplayForms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DIsplayForms.dll": {}
+        }
+      },
       "makeTableFromExcel/1.0.0": {
         "type": "project",
         "compile": {
@@ -79,19 +92,6 @@
         },
         "runtime": {
           "bin/placeholder/makeTableFromExcel.dll": {}
-        }
-      },
-      "TextsViewer/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.8.1",
-        "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.1722.45"
-        },
-        "compile": {
-          "bin/placeholder/TextsViewer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TextsViewer.dll": {}
         }
       }
     },
@@ -115,6 +115,19 @@
           "build/Microsoft.Web.WebView2.targets": {}
         }
       },
+      "DIsplayForms/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8.1",
+        "dependencies": {
+          "Microsoft.Web.WebView2": "1.0.1722.45"
+        },
+        "compile": {
+          "bin/placeholder/DIsplayForms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DIsplayForms.dll": {}
+        }
+      },
       "makeTableFromExcel/1.0.0": {
         "type": "project",
         "compile": {
@@ -122,19 +135,6 @@
         },
         "runtime": {
           "bin/placeholder/makeTableFromExcel.dll": {}
-        }
-      },
-      "TextsViewer/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.8.1",
-        "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.1722.45"
-        },
-        "compile": {
-          "bin/placeholder/TextsViewer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TextsViewer.dll": {}
         }
       }
     },
@@ -158,6 +158,19 @@
           "build/Microsoft.Web.WebView2.targets": {}
         }
       },
+      "DIsplayForms/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.8.1",
+        "dependencies": {
+          "Microsoft.Web.WebView2": "1.0.1722.45"
+        },
+        "compile": {
+          "bin/placeholder/DIsplayForms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DIsplayForms.dll": {}
+        }
+      },
       "makeTableFromExcel/1.0.0": {
         "type": "project",
         "compile": {
@@ -165,19 +178,6 @@
         },
         "runtime": {
           "bin/placeholder/makeTableFromExcel.dll": {}
-        }
-      },
-      "TextsViewer/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.8.1",
-        "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.1722.45"
-        },
-        "compile": {
-          "bin/placeholder/TextsViewer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TextsViewer.dll": {}
         }
       }
     }
@@ -273,21 +273,21 @@
         "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
     },
+    "DIsplayForms/1.0.0": {
+      "type": "project",
+      "path": "../../TextsViewer/TextsViewer/DIsplayForms.csproj",
+      "msbuildProject": "../../TextsViewer/TextsViewer/DIsplayForms.csproj"
+    },
     "makeTableFromExcel/1.0.0": {
       "type": "project",
       "path": "../../makeTableFromExcel/makeTableFromExcel/makeTableFromExcel.csproj",
       "msbuildProject": "../../makeTableFromExcel/makeTableFromExcel/makeTableFromExcel.csproj"
-    },
-    "TextsViewer/1.0.0": {
-      "type": "project",
-      "path": "../../TextsViewer/TextsViewer/TextsViewer.csproj",
-      "msbuildProject": "../../TextsViewer/TextsViewer/TextsViewer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8.1": [
+      "DIsplayForms >= 1.0.0",
       "Microsoft.Web.WebView2 >= 1.0.1722.45",
-      "TextsViewer >= 1.0.0",
       "makeTableFromExcel >= 1.0.0"
     ]
   },
@@ -321,8 +321,8 @@
             "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj": {
               "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj"
             },
-            "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
-              "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj"
+            "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\DIsplayForms.csproj": {
+              "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\DIsplayForms.csproj"
             }
           }
         }

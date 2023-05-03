@@ -31,8 +31,8 @@
               "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj": {
                 "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\makeTableFromExcel\\makeTableFromExcel\\makeTableFromExcel.csproj"
               },
-              "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
-                "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj"
+              "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\DIsplayForms.csproj": {
+                "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\DIsplayForms.csproj"
               }
             }
           }
@@ -75,12 +75,12 @@
         "net481": {}
       }
     },
-    "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj": {
+    "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\DIsplayForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
-        "projectName": "TextsViewer",
-        "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\TextsViewer.csproj",
+        "projectUniqueName": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\DIsplayForms.csproj",
+        "projectName": "DIsplayForms",
+        "projectPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\DIsplayForms.csproj",
         "packagesPath": "C:\\Users\\kabah\\.nuget\\packages\\",
         "outputPath": "C:\\Addin-Word-ReportHelper-\\ReportHelperAddin\\TextsViewer\\TextsViewer\\obj\\",
         "projectStyle": "PackageReference",

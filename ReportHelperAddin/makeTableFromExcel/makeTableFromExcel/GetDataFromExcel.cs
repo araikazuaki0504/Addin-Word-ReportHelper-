@@ -4,18 +4,28 @@ using System.Threading;
 using System.Threading.Tasks;
 using Excel = Microsoft.Office.Interop.Excel;
 using Release = System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace makeTableFromExcel
 {
     public class GetDataFromExcel
     {
-        private string _FilePath = string.Empty;
-        private bool isClosed = false;
+        private string _FilePath = string.Empty;//ファイルパスをメソッド全体で共有したいのでしょうがなく
+        private bool isClosed = false;//エクセルファイルが閉じているかの確認用フラグ
+
+        /// <summary>
+        /// ファイルパスを指定
+        /// </summary>
+        /// <param name="FilePath"></param>
         public GetDataFromExcel(string FilePath)
         {
             _FilePath = FilePath;
         }
 
+        /// <summary>
+        /// エクセルからデータを取得*データのインデックスは１からなので注意
+        /// </summary>
+        /// <returns></returns>
         public List<object[,]> Main()
         {
             Excel.Application excel = new Excel.Application();
@@ -23,32 +33,32 @@ namespace makeTableFromExcel
             Excel.Workbook　excelWorkBook = excelWorkBooks.Open(_FilePath);
             Excel.Sheets excelSheets = excelWorkBook.Sheets;
             Excel.Worksheet excelSheet = excelSheets[1] as Excel.Worksheet;
-            List<string> ColRenge = new List<string>();
             List<object[,]> GottenData = new List<object[,]>();
-            KeyboardHook KeyBoardHook = new KeyboardHook();
+            List<object> SelectionAddress = new List<object>();
 
-
+            excel.EnableEvents = true;
             excel.Visible = true;
             excelWorkBook.BeforeClose += IsExcelClosed_BeforeClose;
             excelSheet.BeforeRightClick += (Excel.Range Target, ref bool Cancel) =>
             {
-                foreach (Excel.Range Data in excel.Selection.Areas)
-                {
-                    ColRenge.Add(Data.Address.ToString());
-                }
+                Excel.Range Selection = excel.Selection;
+                Excel.Areas areas = Selection.Areas;
 
-
-                foreach (string Col in ColRenge)
+                foreach(Excel.Range selectionCells in areas)
                 {
-                    string[] IndexArray = Col.Remove(Col.IndexOf(':'), 1).TrimStart('$').Split('$');
-                    object[,] tmpBuffer = excelSheet.Range[IndexArray[0] + IndexArray[1], IndexArray[2] + IndexArray[3]].Value;
-                    GottenData.Add(tmpBuffer);
+                    SelectionAddress.Add(selectionCells.Address);
                 }
+                
+                foreach (Excel.Range Address in SelectionAddress)
+                {   //１インデックスから返ってくるので注意,オリジンインデックスが0!!!なんでやーーーーー
+                    object[,] Data = excelSheet.Range[Address].Value;
+                    GottenData.Add(Data);
+                }                
             };
 
             while (!isClosed) 
             {
-                Thread.Sleep(1000);
+
             }
 
             foreach (var TargetClass in new object[5] { excel, excelWorkBooks, excelWorkBook, excelSheets, excelSheet })

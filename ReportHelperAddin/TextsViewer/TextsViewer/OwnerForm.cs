@@ -17,11 +17,16 @@ namespace TextsViewer
         {
             InitializeComponent();
             _Filepath = FilePath;
+            SwitchingByExtention(_Filepath);
         }
 
-        private void OwnerForm_Load(object sender, EventArgs e)
+        public OwnerForm()
         {
-            SwitchingByExtention(_Filepath);
+            InitializeComponent();
+            this.Visible = false;
+            Form BrowserViewer = new BrowserByGoogle();
+            this.Owner = BrowserViewer;
+            BrowserViewer.Show();
         }
 
         private void SwitchingByExtention(string FilePath)

@@ -1,45 +1,38 @@
-﻿using Microsoft.Web.WebView2.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Web.WebView2;
+using System.Diagnostics;
+using Microsoft.Web.WebView2.Core;
 
 namespace TextsViewer
 {
-    public partial class TextViewer : Form
+    public partial class BrowserByGoogle : Form
     {
-        private string _TargetPath = string.Empty;
-        public TextViewer(string SelectedFilePath)
+
+        private string _GoogleURL = "www.google.co.jp";
+        public BrowserByGoogle()
         {
             InitializeComponent();
-            _TargetPath = SelectedFilePath;
         }
 
-        private void DisplayTextBook_Resize(object sender, EventArgs e)
-        {
-            this.PDFViewer.ClientSize = this.ClientSize;
-        }
-
-
-        private async void TextViewer_Load(object sender, EventArgs e)
+        private async void BrowserByGoogle_Load(object sender, EventArgs e)
         {
             Debug.WriteLine("Info: before InitializeCoreWebView2Async");
 
             //initialize CoreWebView2
             //await InitializeCoreWebView2Async();
-            await InitializeCoreWebView2Async(PDFViewer, @"C:\temp");
+            await InitializeCoreWebView2Async(this.GoogleBrowser, @"C:\temp");
 
             Debug.WriteLine("Info: after InitializeCoreWebView2Async");
 
             //navigate to URL by setting Source property
-            PDFViewer.Source = new Uri(_TargetPath, UriKind.Absolute);
+            this.GoogleBrowser.Source = new Uri(_GoogleURL, UriKind.Absolute);
         }
 
         public async Task InitializeCoreWebView2Async()
@@ -47,7 +40,7 @@ namespace TextsViewer
             Debug.WriteLine("Info: before EnsureCoreWebView2Async");
 
             //wait for CoreWebView2 initialization
-            await PDFViewer.EnsureCoreWebView2Async();
+            await this.GoogleBrowser.EnsureCoreWebView2Async();
 
             Debug.WriteLine("Info: after EnsureCoreWebView2Async");
 
@@ -79,40 +72,9 @@ namespace TextsViewer
             System.Diagnostics.Debug.WriteLine("Cache data folder set to: " + tempWebCacheDir);
         }
 
-        private void WebsiteNavigate(Microsoft.Web.WebView2.WinForms.WebView2 wv, string dest)
+        private void BrowserByGoogle_Resize(object sender, EventArgs e)
         {
-            //set value
-            string tempDest = dest;
-
-            if (wv != null && wv.CoreWebView2 != null)
-            {
-                if (!String.IsNullOrEmpty(dest))
-                {
-                    if (dest != "about:blank" &&
-                        !dest.StartsWith("edge://") &&
-                        !dest.StartsWith("file://") &&
-                        !dest.StartsWith("http://") &&
-                        !dest.StartsWith("https://"))
-                    {
-                        //URL must start with one of the specified strings
-                        //if not, pre-pend with "http://" or "https://"
-                        //set value
-                        tempDest = "http://" + dest;
-                    }
-
-                    //option 1
-                    wv.CoreWebView2.Navigate(tempDest);
-
-                    //option 2
-                    //wv.Source = new Uri(tempDest, UriKind.Absolute);
-                }
-            }
-        }
-
-        private void TextViewer_Deactivate(object sender, EventArgs e)
-        {
-            this.Focus();
-            this.TopMost = true;
+            this.GoogleBrowser.ClientSize = this.ClientSize;
         }
     }
 }

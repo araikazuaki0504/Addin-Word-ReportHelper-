@@ -41,5 +41,13 @@ namespace MainRibbon
             Debug.WriteLine(Data[0][1, 1].ToString());
             
         }
+
+        private void ToGoogling_Click(object sender, RibbonControlEventArgs e)
+        {
+            using (Form form = new OwnerForm())
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }

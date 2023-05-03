@@ -38,8 +38,6 @@ namespace TextsViewer
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "OwnerForm";
             this.Text = "OwnerForm";
-            this.Visible = false;
-            this.Load += new System.EventHandler(this.OwnerForm_Load);
             this.ResumeLayout(false);
 
         }

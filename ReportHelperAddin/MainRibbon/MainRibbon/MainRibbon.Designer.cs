@@ -36,6 +36,7 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.display = this.Factory.CreateRibbonGroup();
+            this.ToGoogling = this.Factory.CreateRibbonButton();
             this.ViewerFromDialog = this.Factory.CreateRibbonButton();
             this.ViewerForTextBooks = this.Factory.CreateRibbonButton();
             this.Excel = this.Factory.CreateRibbonGroup();
@@ -56,10 +57,20 @@
             // 
             // display
             // 
+            this.display.Items.Add(this.ToGoogling);
             this.display.Items.Add(this.ViewerFromDialog);
             this.display.Items.Add(this.ViewerForTextBooks);
             this.display.Label = "表示";
             this.display.Name = "display";
+            // 
+            // ToGoogling
+            // 
+            this.ToGoogling.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.ToGoogling.Image = global::MainRibbon.Properties.Resources.GoogleLogo;
+            this.ToGoogling.Label = "Google";
+            this.ToGoogling.Name = "ToGoogling";
+            this.ToGoogling.ShowImage = true;
+            this.ToGoogling.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ToGoogling_Click);
             // 
             // ViewerFromDialog
             // 
@@ -122,6 +133,7 @@
         private System.Windows.Forms.OpenFileDialog SelectingFile;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup Excel;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton CreateTableFromExcel;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton ToGoogling;
     }
 
     partial class ThisRibbonCollection

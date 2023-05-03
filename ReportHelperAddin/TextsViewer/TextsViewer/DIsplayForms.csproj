@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowserByGoogle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowserByGoogle.Designer.cs">
+      <DependentUpon>BrowserByGoogle.cs</DependentUpon>
+    </Compile>
     <Compile Include="OwnerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="TextViewerFromDialog.Designer.cs">
       <DependentUpon>TextViewerFromDialog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BrowserByGoogle.resx">
+      <DependentUpon>BrowserByGoogle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OwnerForm.resx">
       <DependentUpon>OwnerForm.cs</DependentUpon>
     </EmbeddedResource>
