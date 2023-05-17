@@ -20,14 +20,6 @@ namespace TextsViewer
             SwitchingByExtention(_Filepath);
         }
 
-        public OwnerForm()
-        {
-            InitializeComponent();
-            this.Visible = false;
-            Form BrowserViewer = new BrowserByGoogle();
-            this.Owner = BrowserViewer;
-            BrowserViewer.Show();
-        }
 
         private void SwitchingByExtention(string FilePath)
         {
@@ -53,6 +45,12 @@ namespace TextsViewer
                     Form ViewFormForImages = new TextViewerFromDialog(FilePath);
                     this.Owner = ViewFormForImages;
                     ViewFormForImages.Show();
+                    break;
+                case "jp":
+                    this.Visible = false;
+                    Form GoogleViewer = new BrowserByGoogle(FilePath);
+                    this.Owner = GoogleViewer;
+                    GoogleViewer.Show();
                     break;
             }
 

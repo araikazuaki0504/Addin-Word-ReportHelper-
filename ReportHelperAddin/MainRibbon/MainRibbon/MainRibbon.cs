@@ -44,10 +44,26 @@ namespace MainRibbon
 
         private void ToGoogling_Click(object sender, RibbonControlEventArgs e)
         {
-            using (Form form = new OwnerForm())
+            string GoogleURL = "https://www.google.co.jp";
+            using (Form form = new OwnerForm(GoogleURL))
             {
                 form.ShowDialog();
             }
+        }
+
+        //このアドインを開いているファイルのFullPath取得
+        private string getMyselfPath()
+        {
+            Microsoft.Office.Interop.Word.Application TargetwordApplication = Globals.ThisAddIn.Application;
+
+            if (TargetwordApplication != null && TargetwordApplication.Documents.Count > 0)
+            {
+                Document activeDocument = TargetwordApplication.ActiveDocument;
+                string filePath = activeDocument.FullName;
+                return filePath;
+            }
+
+            return null;
         }
     }
 }

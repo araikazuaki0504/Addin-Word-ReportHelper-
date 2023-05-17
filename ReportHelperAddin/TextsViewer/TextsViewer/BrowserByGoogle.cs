@@ -15,10 +15,11 @@ namespace TextsViewer
     public partial class BrowserByGoogle : Form
     {
 
-        private string _GoogleURL = "www.google.co.jp";
-        public BrowserByGoogle()
+        private string _GoogleURL = string.Empty;
+        public BrowserByGoogle(string URL)
         {
             InitializeComponent();
+            _GoogleURL = URL;
         }
 
         private async void BrowserByGoogle_Load(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace TextsViewer
             Debug.WriteLine("Info: after InitializeCoreWebView2Async");
 
             //navigate to URL by setting Source property
-            this.GoogleBrowser.Source = new Uri(_GoogleURL, UriKind.Absolute);
+            this.GoogleBrowser.Source = new Uri(_GoogleURL);
         }
 
         public async Task InitializeCoreWebView2Async()
@@ -40,7 +41,7 @@ namespace TextsViewer
             Debug.WriteLine("Info: before EnsureCoreWebView2Async");
 
             //wait for CoreWebView2 initialization
-            await this.GoogleBrowser.EnsureCoreWebView2Async();
+            await GoogleBrowser.EnsureCoreWebView2Async();
 
             Debug.WriteLine("Info: after EnsureCoreWebView2Async");
 

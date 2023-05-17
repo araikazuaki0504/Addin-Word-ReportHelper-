@@ -39,7 +39,7 @@ namespace TextsViewer
             Debug.WriteLine("Info: after InitializeCoreWebView2Async");
 
             //navigate to URL by setting Source property
-            PDFViewer.Source = new Uri(_TargetPath, UriKind.Absolute);
+            PDFViewer.Source = new Uri(_TargetPath);
         }
 
         public async Task InitializeCoreWebView2Async()
