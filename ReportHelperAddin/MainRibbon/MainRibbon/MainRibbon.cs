@@ -49,6 +49,7 @@ namespace MainRibbon
             {
                 form.ShowDialog();
             }
+
         }
 
         //このアドインを開いているファイルのFullPath取得
