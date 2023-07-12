@@ -10,7 +10,7 @@
 *.userosscache
 *.sln.docstates
 よく見るやつ
-*!よく見るやつ/このフォルダに入っているものが実験テキストを表示から選べます.txt
+!よく見るやつ/このフォルダに入っているものが実験テキストを表示から選べます.txt
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
