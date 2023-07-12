@@ -46,7 +46,12 @@ namespace TextsViewer
         {
             foreach (string FilePath in FileNames)
             {
+
                 string[] SplitedFilePath = FilePath.Split('\\');
+                if (SplitedFilePath[SplitedFilePath.Length - 1] == "このフォルダに入っているものが実験テキストを表示から選べます.txt")
+                {
+                    continue;
+                }
                 this.ExprimentName.Items.Add(SplitedFilePath[SplitedFilePath.Length - 1]);
             }
         }
