@@ -66,5 +66,23 @@ namespace MainRibbon
 
             return null;
         }
+
+        private void baseballViewer_Click(object sender, RibbonControlEventArgs e)
+        {
+            string BaseballURL = "https://vk.sportsbull.jp/koshien/";
+            using (Form form = new OwnerForm(BaseballURL))
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void Netflix_Click(object sender, RibbonControlEventArgs e)
+        {
+            string NetflixURL = "https://www.netflix.com/browse";
+            using (Form form = new OwnerForm(NetflixURL))
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }

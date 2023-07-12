@@ -36,15 +36,19 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.display = this.Factory.CreateRibbonGroup();
+            this.Excel = this.Factory.CreateRibbonGroup();
+            this.SelectingFile = new System.Windows.Forms.OpenFileDialog();
+            this.videoViewer = this.Factory.CreateRibbonGroup();
             this.ToGoogling = this.Factory.CreateRibbonButton();
             this.ViewerFromDialog = this.Factory.CreateRibbonButton();
             this.ViewerForTextBooks = this.Factory.CreateRibbonButton();
-            this.Excel = this.Factory.CreateRibbonGroup();
             this.CreateTableFromExcel = this.Factory.CreateRibbonButton();
-            this.SelectingFile = new System.Windows.Forms.OpenFileDialog();
+            this.Netflix = this.Factory.CreateRibbonButton();
+            this.baseballViewer = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.display.SuspendLayout();
             this.Excel.SuspendLayout();
+            this.videoViewer.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab1
@@ -52,6 +56,7 @@
             this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.tab1.Groups.Add(this.display);
             this.tab1.Groups.Add(this.Excel);
+            this.tab1.Groups.Add(this.videoViewer);
             this.tab1.Label = "ReportHelper";
             this.tab1.Name = "tab1";
             // 
@@ -62,6 +67,23 @@
             this.display.Items.Add(this.ViewerForTextBooks);
             this.display.Label = "表示";
             this.display.Name = "display";
+            // 
+            // Excel
+            // 
+            this.Excel.Items.Add(this.CreateTableFromExcel);
+            this.Excel.Label = "エクセル関係";
+            this.Excel.Name = "Excel";
+            // 
+            // SelectingFile
+            // 
+            this.SelectingFile.FileName = "SelectingFile";
+            // 
+            // videoViewer
+            // 
+            this.videoViewer.Items.Add(this.baseballViewer);
+            this.videoViewer.Items.Add(this.Netflix);
+            this.videoViewer.Label = "動画視聴";
+            this.videoViewer.Name = "videoViewer";
             // 
             // ToGoogling
             // 
@@ -90,12 +112,6 @@
             this.ViewerForTextBooks.ShowImage = true;
             this.ViewerForTextBooks.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ViewerForTextBooks_Click);
             // 
-            // Excel
-            // 
-            this.Excel.Items.Add(this.CreateTableFromExcel);
-            this.Excel.Label = "エクセル関係";
-            this.Excel.Name = "Excel";
-            // 
             // CreateTableFromExcel
             // 
             this.CreateTableFromExcel.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -105,9 +121,23 @@
             this.CreateTableFromExcel.ShowImage = true;
             this.CreateTableFromExcel.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.CreateTableFromExcel_Click);
             // 
-            // SelectingFile
+            // Netflix
             // 
-            this.SelectingFile.FileName = "SelectingFile";
+            this.Netflix.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Netflix.Image = global::MainRibbon.Properties.Resources.Netflix_Symbol;
+            this.Netflix.Label = "Netflix視聴";
+            this.Netflix.Name = "Netflix";
+            this.Netflix.ShowImage = true;
+            this.Netflix.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Netflix_Click);
+            // 
+            // baseballViewer
+            // 
+            this.baseballViewer.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.baseballViewer.Image = global::MainRibbon.Properties.Resources.Baseball;
+            this.baseballViewer.Label = "高校野球中継を見る";
+            this.baseballViewer.Name = "baseballViewer";
+            this.baseballViewer.ShowImage = true;
+            this.baseballViewer.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.baseballViewer_Click);
             // 
             // ReportHelper
             // 
@@ -120,6 +150,8 @@
             this.display.PerformLayout();
             this.Excel.ResumeLayout(false);
             this.Excel.PerformLayout();
+            this.videoViewer.ResumeLayout(false);
+            this.videoViewer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -134,6 +166,9 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup Excel;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton CreateTableFromExcel;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ToGoogling;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton baseballViewer;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup videoViewer;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton Netflix;
     }
 
     partial class ThisRibbonCollection

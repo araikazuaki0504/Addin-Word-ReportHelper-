@@ -47,6 +47,8 @@ namespace TextsViewer
                     ViewFormForImages.Show();
                     break;
                 case "jp":
+                case "jp/koshien/":
+                case "com/browse":
                     this.Visible = false;
                     Form GoogleViewer = new BrowserByGoogle(FilePath);
                     this.Owner = GoogleViewer;

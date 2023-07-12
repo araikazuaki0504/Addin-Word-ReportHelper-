@@ -63,6 +63,16 @@ namespace MainRibbon.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap Baseball {
+            get {
+                object obj = ResourceManager.GetObject("Baseball", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap Excel {
             get {
                 object obj = ResourceManager.GetObject("Excel", resourceCulture);
@@ -76,6 +86,16 @@ namespace MainRibbon.Properties {
         internal static System.Drawing.Bitmap GoogleLogo {
             get {
                 object obj = ResourceManager.GetObject("GoogleLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap Netflix_Symbol {
+            get {
+                object obj = ResourceManager.GetObject("Netflix-Symbol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
