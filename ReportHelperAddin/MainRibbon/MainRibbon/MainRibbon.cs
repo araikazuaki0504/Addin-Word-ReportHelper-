@@ -84,5 +84,14 @@ namespace MainRibbon
                 form.ShowDialog();
             }
         }
+
+        private void YoutubeViewer_Click(object sender, RibbonControlEventArgs e)
+        {
+            string YoutubeURL = "https://www.youtube.com/";
+            using (Form form = new OwnerForm(YoutubeURL))
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }

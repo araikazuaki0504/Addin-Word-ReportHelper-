@@ -231,6 +231,12 @@
   <ItemGroup>
     <None Include="Resources\Netflix-Symbol.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtubeロゴデータ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtubeLogo.jpg" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

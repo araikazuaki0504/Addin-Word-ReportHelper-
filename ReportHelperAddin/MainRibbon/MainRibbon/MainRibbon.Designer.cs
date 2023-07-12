@@ -37,14 +37,15 @@
             this.tab1 = this.Factory.CreateRibbonTab();
             this.display = this.Factory.CreateRibbonGroup();
             this.Excel = this.Factory.CreateRibbonGroup();
-            this.SelectingFile = new System.Windows.Forms.OpenFileDialog();
             this.videoViewer = this.Factory.CreateRibbonGroup();
+            this.SelectingFile = new System.Windows.Forms.OpenFileDialog();
             this.ToGoogling = this.Factory.CreateRibbonButton();
             this.ViewerFromDialog = this.Factory.CreateRibbonButton();
             this.ViewerForTextBooks = this.Factory.CreateRibbonButton();
             this.CreateTableFromExcel = this.Factory.CreateRibbonButton();
-            this.Netflix = this.Factory.CreateRibbonButton();
             this.baseballViewer = this.Factory.CreateRibbonButton();
+            this.Netflix = this.Factory.CreateRibbonButton();
+            this.YoutubeViewer = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.display.SuspendLayout();
             this.Excel.SuspendLayout();
@@ -74,16 +75,17 @@
             this.Excel.Label = "エクセル関係";
             this.Excel.Name = "Excel";
             // 
-            // SelectingFile
-            // 
-            this.SelectingFile.FileName = "SelectingFile";
-            // 
             // videoViewer
             // 
             this.videoViewer.Items.Add(this.baseballViewer);
             this.videoViewer.Items.Add(this.Netflix);
+            this.videoViewer.Items.Add(this.YoutubeViewer);
             this.videoViewer.Label = "動画視聴";
             this.videoViewer.Name = "videoViewer";
+            // 
+            // SelectingFile
+            // 
+            this.SelectingFile.FileName = "SelectingFile";
             // 
             // ToGoogling
             // 
@@ -121,6 +123,15 @@
             this.CreateTableFromExcel.ShowImage = true;
             this.CreateTableFromExcel.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.CreateTableFromExcel_Click);
             // 
+            // baseballViewer
+            // 
+            this.baseballViewer.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.baseballViewer.Image = global::MainRibbon.Properties.Resources.Baseball;
+            this.baseballViewer.Label = "高校野球中継を見る";
+            this.baseballViewer.Name = "baseballViewer";
+            this.baseballViewer.ShowImage = true;
+            this.baseballViewer.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.baseballViewer_Click);
+            // 
             // Netflix
             // 
             this.Netflix.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -130,14 +141,14 @@
             this.Netflix.ShowImage = true;
             this.Netflix.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.Netflix_Click);
             // 
-            // baseballViewer
+            // YoutubeViewer
             // 
-            this.baseballViewer.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.baseballViewer.Image = global::MainRibbon.Properties.Resources.Baseball;
-            this.baseballViewer.Label = "高校野球中継を見る";
-            this.baseballViewer.Name = "baseballViewer";
-            this.baseballViewer.ShowImage = true;
-            this.baseballViewer.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.baseballViewer_Click);
+            this.YoutubeViewer.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.YoutubeViewer.Image = global::MainRibbon.Properties.Resources.youtubeLogo;
+            this.YoutubeViewer.Label = "Youtube視聴";
+            this.YoutubeViewer.Name = "YoutubeViewer";
+            this.YoutubeViewer.ShowImage = true;
+            this.YoutubeViewer.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.YoutubeViewer_Click);
             // 
             // ReportHelper
             // 
@@ -169,6 +180,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton baseballViewer;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup videoViewer;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton Netflix;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton YoutubeViewer;
     }
 
     partial class ThisRibbonCollection
