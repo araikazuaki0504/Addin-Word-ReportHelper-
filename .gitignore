@@ -92,7 +92,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-Assets/*TextBooks
+*TextBooks
 
 # Chutzpah Test files
 _Chutzpah*
