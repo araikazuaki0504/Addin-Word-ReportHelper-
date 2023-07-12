@@ -22,13 +22,13 @@ namespace TextsViewer
 
         private void SelectExpriment_Load(object sender, EventArgs e)
         {
-            string FolderPath = Path.GetFullPath(@"../../../../Assets/TextBooks");
+            string FolderPath = Path.GetFullPath(@"C:\Addin-Word-ReportHelper-\ReportHelperAddin\Assets\よく見るやつ");
             SetFileNames(FolderPath);
         }
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            string FolderPath = Path.GetFullPath(@"../../../../Assets/TextBooks");
+            string FolderPath = Path.GetFullPath(@"C:\Addin-Word-ReportHelper-\ReportHelperAddin\Assets\よく見るやつ");
             this.Visible = false;
             Form DisPlayTextBook = new TextViewer(FolderPath + "\\" + this.ExprimentName.SelectedItem.ToString());
             this.Owner = DisPlayTextBook;
